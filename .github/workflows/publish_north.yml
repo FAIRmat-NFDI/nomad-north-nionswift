@@ -3,11 +3,15 @@ on:
   push:
     branches:
       - main
+      - 'feature/**'
     tags:
       - "v*.*.*"
   pull_request:
     branches:
       - main
+    # Trigger on opened, updated (synchronize), or reopened PRs
+    types: [opened, synchronize, reopened]
+
 
 env:
   REGISTRY: ghcr.io
