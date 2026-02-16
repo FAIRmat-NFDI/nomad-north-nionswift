@@ -7,17 +7,18 @@ dependencies:
   - python=3.12
   - ipykernel
   - scikit-learn
-  - nion
   - nionswift
-  - nionswift-tool
-  - nionswift-experimental
   - nionswift-io
-  - nionswift-instrumentation
-  # - nionswift-segmentation
+  - nionswift-tool
   - nionswift-usim
-  - nionswift-video-capture
+  - nionswift-instrumentation
+  - nionswift-experimental
   - nionswift-eels-analysis
-  # - nionswift-elabftw-plugin
+  - nionswift-video-capture
   - pip
   # pip packages (installed into the same base env)
   # - pip:
+    # nionswift extensions
+    # - nionui
+    # - nionswift-elabftw-plugin
+    # - nionswift-segmentation
