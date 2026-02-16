@@ -44,7 +44,7 @@ RUN conda run -n ${env_name} python -m ipykernel install --user --name="${env_na
     && fix-permissions "/home/${NB_USER}"
 
 # Optional: make env default for subsequent RUN commands
-SHELL ["conda", "run", "-n", ${env_name}, "/bin/bash", "-c"]
+SHELL ["conda", "run", "-n", "nionswift", "/bin/bash", "-c"]
 
 # Switch back to jovyan to avoid accidental container runs as root
 USER ${NB_UID}
