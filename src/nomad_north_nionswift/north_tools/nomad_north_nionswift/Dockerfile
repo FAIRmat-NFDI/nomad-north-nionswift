@@ -14,9 +14,9 @@ RUN apt update \
 
 USER ${NB_UID}
 
-COPY --chown=${NB_UID}:${NB_GID} environment.yml /tmp/environment.yml
-COPY --chown=${NB_UID}:${NB_GID} Nion ${HOME}/.local/share/Nion
-COPY --chown=${NB_UID}:${NB_GID} Documents ${HOME}/Documents
+COPY --chown=${NB_UID}:${NB_GID} environment.yml "/tmp/environment.yml"
+COPY --chown=${NB_UID}:${NB_GID} Nion "${HOME}/.local/share/Nion"
+COPY --chown=${NB_UID}:${NB_GID} Documents "${HOME}/Documents"
 
 # replace the previous three lines with this to eventually make the image slimmer
 # COPY --chown=${NB_UID}:${NB_GID} \
@@ -31,8 +31,9 @@ COPY --chown=${NB_UID}:${NB_GID} Documents ${HOME}/Documents
 
 # Create the named environment with packages as mentioned in the environment.yml file, clear mamba cache
 ARG env_name=nionswift
-RUN mamba env create -f /tmp/environment.yml \
-    && mamba clean --all -f -y
+RUN mamba env create -f "/tmp/environment.yml" \
+    && mamba clean --all -f -y \
+    && rm -rf "/tmp/environment.yml"
 
 # Install Python package from Git inside nionswift env
 RUN "${CONDA_DIR}/envs/${env_name}/bin/pip" install --no-cache-dir \
@@ -54,11 +55,11 @@ WORKDIR "${HOME}"
 # the next line should not work any longer as we moved from openbox to xfce4
 # COPY --chown=${NB_UID}:${NB_GID} config/menu.xml ${HOME}/.config/openbox/menu.xml
 # is the next line a possible replacement?
-RUN mkdir -p ${HOME}/.local/share/applications && \
-    chown -R ${NB_UID}:${NB_GID} ${HOME}/.local/share/applications
-COPY --chown=${NB_UID}:${NB_GID} config/nionswift.desktop ${HOME}/.local/share/applications/nionswift.desktop
+RUN mkdir -p "${HOME}/.local/share/applications" && \
+    chown -R ${NB_UID}:${NB_GID} "${HOME}/.local/share/applications"
+COPY --chown=${NB_UID}:${NB_GID} "config/nionswift.desktop" "${HOME}/.local/share/applications/nionswift.desktop"
 
 # the next line should not work any longer as we moved from openbox to xfce4
 # COPY --chown=${NB_UID}:${NB_GID} config/autostart ${HOME}/.config/openbox/autostart
 # is the next line a possible replacement?
-COPY --chown=${NB_UID}:${NB_GID} config/nionswift.desktop ${HOME}/.config/autostart/nionswift.desktop
+COPY --chown=${NB_UID}:${NB_GID} "config/nionswift.desktop" "${HOME}/.config/autostart/nionswift.desktop"

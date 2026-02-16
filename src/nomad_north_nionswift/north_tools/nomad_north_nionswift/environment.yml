@@ -18,6 +18,6 @@ dependencies:
   - nionswift-video-capture
   - nionswift-eels-analysis
   # - nionswift-elabftw-plugin
-  # - pip
+  - pip
   # pip packages (installed into the same base env)
   # - pip:
