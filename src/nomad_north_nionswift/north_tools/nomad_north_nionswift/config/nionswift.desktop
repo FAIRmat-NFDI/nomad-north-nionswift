@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=NionSwift
+Exec=/opt/conda/envs/nionswift/bin/nionswift
+StartupNotify=false
+Terminal=false

@@ -1,0 +1,23 @@
+name: nionswift
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  # Conda packages installed in base
+  - python=3.12
+  - ipykernel
+  - scikit-learn
+  - nion
+  - nionswift
+  - nionswift-tool
+  - nionswift-experimental
+  - nionswift-io
+  - nionswift-instrumentation
+  # - nionswift-segmentation
+  - nionswift-usim
+  - nionswift-video-capture
+  - nionswift-eels-analysis
+  # - nionswift-elabftw-plugin
+  # - pip
+  # pip packages (installed into the same base env)
+  # - pip:
