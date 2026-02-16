@@ -36,8 +36,8 @@ RUN mamba env create -f "/tmp/environment.yml" \
     && rm -rf "/tmp/environment.yml"
 
 # Install Python package from Git inside nionswift env
-RUN "${CONDA_DIR}/envs/${env_name}/bin/pip" install --no-cache-dir \
-    "git+https://git.physik.hu-berlin.de/kornilog/nionswift_frwr_plugin.git@08dc2c8b2a903e5e92e3c55fb4b9248ef5af60ec"
+# RUN "${CONDA_DIR}/envs/${env_name}/bin/pip" install --no-cache-dir \
+#     "git+https://git.physik.hu-berlin.de/kornilog/nionswift_frwr_plugin.git@08dc2c8b2a903e5e92e3c55fb4b9248ef5af60ec"
 
 # Register environment as Jupyter kernel
 RUN conda run -n ${env_name} python -m ipykernel install --user --name="${env_name}" \
