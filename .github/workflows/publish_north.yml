@@ -70,7 +70,7 @@ jobs:
 
       # https://docs.docker.com/build/ci/github-actions/share-image-jobs/
       # https://github.com/docker/build-push-action
-      - name: Build and publish nomad_north_nionswift image
+      - name: Build and publish nionswift image
         uses: docker/build-push-action@v6
         with:
           context: .
