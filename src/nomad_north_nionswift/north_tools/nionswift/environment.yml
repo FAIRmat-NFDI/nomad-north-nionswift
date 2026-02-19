@@ -3,7 +3,6 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  # Conda packages installed in base
   - python=3.12
   - ipykernel
   - scikit-learn
@@ -16,7 +15,7 @@ dependencies:
   - nionswift-eels-analysis
   - nionswift-video-capture
   - pip
-  # pip packages (installed into the same base env)
+  # pip packages (installed into the same env)
   # - pip:
     # nionswift extensions
     # - nionui
