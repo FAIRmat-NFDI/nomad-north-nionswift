@@ -19,7 +19,7 @@ from nomad.config.models.north import NORTHTool
 from nomad.config.models.plugins import NorthToolEntryPoint
 
 nionswift = NORTHTool(
-    image='ghcr.io/fairmat-nfdi/nomad-north-nionswift:pr-5',
+    image='ghcr.io/fairmat-nfdi/nomad-north-nionswift:latest',
     description="""### **nionswift**: Software package for electron microscopy
 
     data analysis and visualization. [Homepage](https://nionswift.readthedocs.io/en/stable/).""",
