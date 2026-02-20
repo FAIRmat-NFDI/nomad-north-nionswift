@@ -14,6 +14,11 @@ RUN apt update \
  && apt-get install  --no-install-recommends -y \
         git \
         build-essential \
+        libxkbcommon-x11-0 \
+        libxcb-cursor0 \
+        libxcb-icccm4 \
+        libxcb-image0 \
+        libxcb-keysyms1 \
  && rm -rf /var/lib/apt/lists/*
 
 # Switch back to jovyan to avoid accidental container runs as root
