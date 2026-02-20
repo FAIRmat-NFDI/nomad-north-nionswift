@@ -11,11 +11,17 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 USER root
 
 RUN apt update \
- && apt-get install -y \
+ && apt-get install  --no-install-recommends -y \
         git \
         build-essential \
+        libxkbcommon-x11-0 \
+        libxcb-cursor0 \
+        libxcb-icccm4 \
+        libxcb-image0 \
+        libxcb-keysyms1 \
  && rm -rf /var/lib/apt/lists/*
 
+# Switch back to jovyan to avoid accidental container runs as root
 USER ${NB_UID}
 
 COPY --chown=${NB_UID}:${NB_GID} src/nomad_north_nionswift/north_tools/nionswift/environment.yml "/tmp/environment.yml"
@@ -51,8 +57,7 @@ RUN conda run -n ${env_name} python -m ipykernel install --user --name="${env_na
 # Optional: make env default for subsequent RUN commands
 SHELL ["conda", "run", "-n", "nionswift", "/bin/bash", "-c"]
 
-# Switch back to jovyan to avoid accidental container runs as root
-USER ${NB_UID}
+# USER ${NB_UID}
 # why the previous line again, shouldnt we have switched way before already
 WORKDIR "${HOME}"
 

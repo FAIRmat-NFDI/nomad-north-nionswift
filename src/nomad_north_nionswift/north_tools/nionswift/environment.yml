@@ -1,23 +1,22 @@
 name: nionswift
 channels:
   - conda-forge
-  - defaults
+  - nion
 dependencies:
-  # Conda packages installed in base
-  - python=3.12
+  - python=3.13
   - ipykernel
   - scikit-learn
   - nionswift
-  - nionswift-io
-  - nionswift-tool
-  - nionswift-usim
-  - nionswift-instrumentation
-  - nionswift-experimental
-  - nionswift-eels-analysis
-  - nionswift-video-capture
   - pip
-  # pip packages (installed into the same base env)
-  # - pip:
+  # pip packages (installed into the same env)
+  - pip:
+    - nionswift-io
+    - nionswift-tool
+    - nionswift-usim
+    - nionswift-instrumentation
+    - nionswift-experimental
+    - nionswift-eels-analysis
+    - nionswift-video-capture
     # nionswift extensions
     # - nionui
     # - nionswift-elabftw-plugin
