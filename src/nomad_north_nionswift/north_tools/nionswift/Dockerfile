@@ -23,6 +23,7 @@ RUN apt update \
     && apt-get install  --no-install-recommends -y \
         git \
         build-essential \
+        libgl1 \
         libxkbcommon-x11-0 \
         libxcb-cursor0 \
         libxcb-icccm4 \
@@ -44,7 +45,7 @@ COPY --chown=${NB_UID}:${NB_GID} src/nomad_north_nionswift/north_tools/nionswift
 # Create the named environment with packages as mentioned in the environment.yml file, clear mamba cache
 ARG CONDA_ENV_NAME=nionswift
 
-RUN mamba create -y -n ${CONDA_ENV_NAME} python=3.13 ipykernel \
+RUN mamba create -y -n ${CONDA_ENV_NAME} python=3.13 ipykernel pyqt=5 \
     && mamba clean -afy
 
 ENV UV_PROJECT_ENVIRONMENT=${CONDA_DIR}/envs/{CONDA_ENV_NAME}
