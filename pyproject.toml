@@ -13,7 +13,7 @@ classifiers = [
     "License :: OSI Approved :: Apache Software License",
 ]
 name = "nomad-north-nionswift"
-description = "NOMAD NORTH plugin for nionswift."
+description = "NOMAD NORTH plugin for nionswift"
 version = "0.1.0"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -133,13 +133,8 @@ package-dir = { "" = "src" }
 where = ["src"]
 
 [project.entry-points.'nomad.plugin']
-
-
-
-
-
-
 north_tool_entry_point = "nomad_north_nionswift.north_tools.nionswift:north_tool_entry_point"
+
 [tool.cruft]
 # Avoid updating workflow files, this leads to permissions issues
 skip = [".github/*"]

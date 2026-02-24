@@ -19,14 +19,12 @@ from nomad.config.models.north import NORTHTool
 from nomad.config.models.plugins import NorthToolEntryPoint
 
 nionswift = NORTHTool(
-    image='ghcr.io/fairmat-nfdi/nomad-north-nionswift:latest',
-    description="""### **nionswift**: Software package for electron microscopy
-
-    data analysis and visualization. [Homepage](https://nionswift.readthedocs.io/en/stable/).""",
-    short_description='Jupyterlab with nionswift installed',
+    image='ghcr.io/fairmat-nfdi/nomad-north-nionswift:v0.1.0',
+    description="""**nionswift**: [Software for electron microscopy data analysis and visualization](https://nionswift.readthedocs.io/en/stable/)""",
+    short_description='Jupyterlab with Bruker nionswift installed',
     external_mounts=[],
     file_extensions=['tiff, tif, dm3, dm4, hdf5, h5, nsproj'],
-    icon='nionswift.png',
+    icon='https://github.com/FAIRmat-NFDI/nomad-north-nionswift/blob/main/src/nomad_north_nionswift/north_tools/nionswift/nionswift.png',
     image_pull_policy='Always',
     default_url='/desktop',
     maintainer=[{'email': 'markus.kuehbach@physik.hu-berlin.de', 'name': 'Markus Kühbach'}],
