@@ -4,7 +4,7 @@ This directory contains the configuration for the nionswift NORTH (NOMAD Remote 
 
 ## Quick start
 
-The nionswift NORTH tool provides a containerized environment defined in `NORTHtool` definition, a `NorthToolEntryPoint`, and a Dockerfile.
+The nionswift NORTH tool provides a containerized environment defined in a `NORTHTool` definition, a `NorthToolEntryPoint`, and a Dockerfile.
 
 ## Documentation
 
