@@ -81,4 +81,3 @@ RUN mkdir -p "${HOME}/.local/share/applications" \
 
 COPY --chown=${NB_UID}:${NB_GID} "src/nomad_north_nionswift/north_tools/nionswift/config/nionswift.desktop" "${HOME}/.local/share/applications/nionswift.desktop"
 COPY --chown=${NB_UID}:${NB_GID} "src/nomad_north_nionswift/north_tools/nionswift/config/nionswift.desktop" "${HOME}/.config/autostart/nionswift.desktop"
-

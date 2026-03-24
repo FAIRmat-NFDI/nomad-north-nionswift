@@ -6,6 +6,23 @@ This directory contains the configuration for the nionswift NORTH (NOMAD Remote 
 
 The nionswift NORTH tool provides a containerized environment defined in a `NORTHTool` definition, a `NorthToolEntryPoint`, and a Dockerfile.
 
+## Building and testing
+
+Build the Docker image locally:
+
+```bash
+docker build -f src/nomad_north_nionswift/north_tools/nionswift/Dockerfile \
+    -t ghcr.io/fairmat-nfdi/nomad-north-nionswift:latest .
+```
+
+Test the image (for jupyter notebook image):
+
+```bash
+docker run -p 8888:8888 ghcr.io/fairmat-nfdi/nomad-north-nionswift:latest
+```
+
+Access JupyterLab at `http://localhost:8888`.
+
 ## Documentation
 
 For comprehensive documentation on creating and managing NORTH tools, including e.g.,
