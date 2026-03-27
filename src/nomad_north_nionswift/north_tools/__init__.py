@@ -1,7 +1,7 @@
 from nomad.config.models.north import NORTHTool
 from nomad.config.models.plugins import NorthToolEntryPoint
 
-nionswift = NORTHTool(
+nionswift_north_tool = NORTHTool(
     short_description='Use Bruker nionswift to visualize and analyze electron microscopy data in NOMAD.',
     image='ghcr.io/fairmat-nfdi/nomad-north-nionswift:main',
     description="""### **nionswift**:
@@ -22,7 +22,7 @@ nionswift = NORTHTool(
     display_name='nionswift',
 )
 
-north_entry_point = NorthToolEntryPoint(
-    id_url_safe='nomad-north-nionswift-nionswift',
-    north_tool=nionswift,
+nionswift = NorthToolEntryPoint(
+    id_url_safe='nionswift',
+    north_tool=nionswift_north_tool,
 )
