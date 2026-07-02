@@ -10,7 +10,7 @@ nionswift_north_tool = NORTHTool(
 
     [Conference proceedings about the software](https://doi.org/10.1017/S1431927614007272)""",
     external_mounts=[],
-    file_extensions=['tiff, tif, dm3, dm4, hdf5, h5, nsproj'],
+    file_extensions=['tif', 'tiff', 'dm3', 'dm4', 'hdf5', 'h5', 'nsproj'],
     icon='https://raw.githubusercontent.com/FAIRmat-NFDI/nomad-north-nionswift/main/src/nomad_north_nionswift/north_tools/nionswift/nionswift.png',
     image_pull_policy='Always',
     default_url='/desktop',
