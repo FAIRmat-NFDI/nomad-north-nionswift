@@ -1,6 +1,9 @@
 # nomad-north-nionswift
 
-This is the NOMAD NORTH plugin for nionswift.
+This is the NOMAD NORTH plugin for Nion Swift.
+
+`nomad-north-nionswift` is a GUI-based NORTH tool offering the open-source image processing
+software [`nionswift`](https://nionswift.readthedocs.io/en/stable/), used especially in the research field of electron microscopy by users of [former Nion, now Bruker](https://ir.bruker.com/press-releases/press-release-details/2024/Bruker-Acquires-Electron-Microscopy-Company-Nion/default.aspx) transmission electron microscopes.
 
 This `nomad` plugin was generated with `Cookiecutter` along with `@nomad`'s [`cookiecutter-nomad-plugin`](https://github.com/FAIRmat-NFDI/cookiecutter-nomad-plugin) template.
 
